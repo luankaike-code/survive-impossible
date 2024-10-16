@@ -24,6 +24,8 @@
 
   --path-rhomb: 0 0, 90% 0, 100% 100%, 10% 100%;
   --path-invert-rhomb: 0 100%, 90% 100%, 100% 0, 10% 0;
+
+  --var-height: 8%;
 }
 
 html, body{
@@ -37,10 +39,10 @@ header{
   justify-content: space-between;
   background-color: var(--primary-color);
   color: var(--second-color);
-  padding-block: 5px;
   padding-inline: 15px;
   padding-inline-end: 30%;
   border-bottom: 1px solid var(--emphasis-color);
+  height: var(--var-height);
 }
 
 header h1{
@@ -62,7 +64,7 @@ header a{
 
 main{
   display: flex;
-  height: 100%;
+  height: calc(100% - var(--var-height));
 }
 
 main *{
@@ -70,18 +72,21 @@ main *{
 }
 
 main > article{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 15px;
   width: 60%;
   background-color: var(--primary-color);
   border-right: 3px solid var(--emphasis-color);
 }
 
-main > article a{
+main > article p{
   display: block;
   color: var(--second-color);
   padding: 5px;
   padding-inline: 30px;
-  width: min-content;
+  width: fit-content;
   transform: translate(5%, -150%);
   backdrop-filter: blur(15px);
   clip-path: polygon(var(--path-invert-rhomb));
@@ -90,14 +95,16 @@ main > article a{
 main > aside{
   padding: 15px;
   width: 40%;
+  background-color: var(--second-color);
 }
 
 main > aside p{
   font-size: 1.2rem;
+  height: min-content;
   margin-bottom: 50px;
 }
 
-main > aside > div{
+main > aside > nav{
   display: flex;
   justify-content: center;
   gap: 15px;
@@ -113,9 +120,14 @@ main > aside button{
   color: var(--second-color);
   background-color: var(--primary-color);
   border: 1px solid var(--emphasis-color);
-  transition: .2s;
+  animation: blink 3s ease;
 }
 
 main > aside button:hover{
   transform: scale(1.3);
+}
+
+@keyframes blink{
+  0%{ opacity: 0; }
+  100%{ opacity: 1; }
 }
