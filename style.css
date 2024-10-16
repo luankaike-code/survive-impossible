@@ -76,7 +76,8 @@ main > article{
   border-right: 3px solid var(--emphasis-color);
 }
 
-main > article p{
+main > article a{
+  display: block;
   color: var(--second-color);
   padding: 5px;
   padding-inline: 30px;
@@ -104,8 +105,10 @@ main > aside > div{
 }
 
 main > aside button{
+  cursor: pointer;
   clip-path: polygon(var(--path-rhomb));
-  width: 20%;
+  min-width: 20%;
+  padding-inline: 10px;
   font-size: 1.2rem;
   color: var(--second-color);
   background-color: var(--primary-color);
