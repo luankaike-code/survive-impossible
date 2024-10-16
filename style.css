@@ -22,7 +22,8 @@
   --second-color: #f6f7f6;
   --emphasis-color: #df2506;
 
-  --division-border: solid var(--emphasis-color);
+  --path-rhomb: 0 0, 90% 0, 100% 100%, 10% 100%;
+  --path-invert-rhomb: 0 100%, 90% 100%, 100% 0, 10% 0;
 }
 
 html, body{
@@ -39,7 +40,7 @@ header{
   padding-block: 5px;
   padding-inline: 15px;
   padding-inline-end: 30%;
-  border-bottom: 1px var(--division-border);
+  border-bottom: 1px solid var(--emphasis-color);
 }
 
 header h1{
@@ -64,16 +65,54 @@ main{
   height: 100%;
 }
 
-main > *{
-  padding: 15px;
-  background-color: var(--primary-color);
+main *{
+  color: var(--primary-color);
 }
 
 main > article{
+  padding: 15px;
   width: 60%;
+  background-color: var(--primary-color);
+  border-right: 3px solid var(--emphasis-color);
+}
+
+main > article p{
+  color: var(--second-color);
+  padding: 5px;
+  padding-inline: 30px;
+  width: min-content;
+  transform: translate(5%, -150%);
+  backdrop-filter: blur(15px);
+  clip-path: polygon(var(--path-invert-rhomb));
 }
 
 main > aside{
+  padding: 15px;
   width: 40%;
-  border-left: 3px var(--division-border);
+}
+
+main > aside p{
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+}
+
+main > aside > div{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+main > aside button{
+  clip-path: polygon(var(--path-rhomb));
+  width: 20%;
+  font-size: 1.2rem;
+  color: var(--second-color);
+  background-color: var(--primary-color);
+  border: 1px solid var(--emphasis-color);
+  transition: .2s;
+}
+
+main > aside button:hover{
+  transform: scale(1.3);
 }
