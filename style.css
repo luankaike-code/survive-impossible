@@ -104,6 +104,13 @@ main > aside p{
   margin-bottom: 50px;
 }
 
+main > aside .options{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
 main > aside > nav{
   display: flex;
   justify-content: center;
@@ -121,6 +128,7 @@ main > aside button{
   background-color: var(--primary-color);
   border: 1px solid var(--emphasis-color);
   animation: blink 3s ease;
+  transition: .2s;
 }
 
 main > aside button:hover{
