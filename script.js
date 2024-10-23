@@ -175,17 +175,29 @@ const blocks = {
 			{
 				label: 'no balção',
 				forKey: 'bad_ending',
-        adicionalText: 'Você, tremendo de pavor, entra debaixo balção.'+badEndingHideText
+        adicionalText: 'Você, tremendo de pavor, entra debaixo balção.'+badEndingHideText,
+				img: {
+					src: 'https://i0.wp.com/br.nacaodamusica.com/wp-content/uploads/2022/02/Panico.jpg',
+					copyright: 'pânico VI (2022)'
+				}
 			},
 			{
 				label: 'atrás da cortina',
 				forKey: 'bad_ending',
-        adicionalText: 'Você se esconde atrás da sua cortinha favorita. Mas logo percebe a má escolha de vez. Percebe que não terá como escolher outra.'+badEndingHideText
+        adicionalText: 'Você se esconde atrás da sua cortinha favorita. Mas logo percebe a má escolha de vez. Percebe que não terá como escolher outra.'+badEndingHideText,
+				img: {
+					src: 'https://i0.wp.com/br.nacaodamusica.com/wp-content/uploads/2022/02/Panico.jpg',
+					copyright: 'pânico VI (2022)'
+				}
 			},
 			{
 				label: 'atrás da porta',
 				forKey: 'bad_ending',
-        adicionalText: 'Você se esconde atrás da porta se lembrando do seu tempo de pique-esconde, "essa ideia é uma idiotice", pensa consigo mesma. "Ela parece muito frágil", você anseia.'+badEndingHideText
+        adicionalText: 'Você se esconde atrás da porta se lembrando do seu tempo de pique-esconde, "essa ideia é uma idiotice", pensa consigo mesma. "Ela parece muito frágil", você anseia.'+badEndingHideText,
+				img: {
+					src: 'https://blogger.googleusercontent.com/img/a/AVvXsEjZRGLxBGdtn48cuYc1qVJ40WjPG3rG-RkabyxQSDIAELMQbPSV4RExN7pqdsATxdqDwi3W4kRUR7VU5U4DJOcaQEpah8FZ0CIXXFtRXlLBRJnTCMwRnG7YwIgP6PNUzwTsf0xSUDIxcg3953Coi2YEl_MZisBROIjMLsk-_gIPfaFmgs5DDTcqJnyy=s2240',
+					copyright: 'pânico VI (2022)'
+				}
 			},
 			{
 				label: 'no armario',
@@ -234,13 +246,16 @@ function getElem(query){
 	return document.querySelector(query);
 }
 
-function updateContent(key, adicionalText=''){
-	const block = blocks[key];
-  block.text = adicionalText+' '+block.text;
+function updateContent(key, adicionalText, img){
+	const block = blocks[key]
+  block.text = adicionalText??''+block.text;
 
-  if(block.img){
-    getElem('article img').src = block.img.src;
-    getElem('article p').textContent = '@'+block.img.copyright;
+  if(block.img || img){
+		const image =  img || block.img;
+		console.log(image, img, block)
+		console.log(block.img, img)
+    getElem('article img').src = image.src;
+    getElem('article p').textContent = '@'+image.copyright;
   }
 
   const p = getElem('aside p');
@@ -249,10 +264,10 @@ function updateContent(key, adicionalText=''){
   getElem('aside nav').innerHTML = '';
 
   function addChooses(){
-    block.chooses?.forEach(({label, forKey, adicionalText}) => {
+    block.chooses?.forEach(({label, forKey, adicionalText, img}) => {
       const btn = document.createElement('button');
       btn.textContent = label;
-      btn.addEventListener('click', () => updateContent(forKey, adicionalText));
+      btn.addEventListener('click', () => updateContent(forKey, adicionalText, img));
       getElem('aside nav').appendChild(btn);
     });
   }
