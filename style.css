@@ -14,13 +14,9 @@
 }
 
 :root{
-  /* --primary-color: #f6f7f6;
-  --second-color: #000;
-  --emphasis-color: #df2506; */
-
-  --primary-color: #000;
+  --primary-color: 0 0 0;
   --second-color: #f6f7f6;
-  --emphasis-color: #df2506;
+  --emphasis-color: 223 37 6;
 
   --path-rhomb: 0 0, 90% 0, 100% 100%, 10% 100%;
   --path-invert-rhomb: 0 100%, 90% 100%, 100% 0, 10% 0;
@@ -31,22 +27,23 @@
 html, body{
   width: 100%;
   height: 100%;
+  background-color: rgb(var(--primary-color));
 }
 
 header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--primary-color);
+  background-color: rgb(var(--primary-color));
   color: var(--second-color);
   padding-inline: 15px;
   padding-inline-end: 30%;
-  border-bottom: 1px solid var(--emphasis-color);
+  border-bottom: 1px solid rgb(var(--emphasis-color));
   height: var(--var-height);
 }
 
 header h1{
-  color: var(--emphasis-color);
+  color: rgb(var(--emphasis-color));
   text-transform: uppercase;
 }
 
@@ -64,38 +61,51 @@ header a{
 
 main{
   display: flex;
+  padding: 20px;
+  gap: 20px;
+  align-items: center;
+  background-size: 250%;
   height: calc(100% - var(--var-height));
+  background-image: linear-gradient(140deg, transparent 40%, rgb(var(--emphasis-color)) 50%, transparent 60%);
+  animation: bg 10s infinite ease-in-out;
 }
 
-main *{
-  color: var(--primary-color);
+main > *{
+  backdrop-filter: blur(15px);
+  background-color: rgb(var(--primary-color) / 60%);
+  border-radius: 20px;
+  padding: 15px;
+  height: 90%;
 }
 
 main > article{
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
-  padding: 15px;
   width: 60%;
-  background-color: var(--primary-color);
-  border-right: 3px solid var(--emphasis-color);
+  height: fit-content;
+}
+
+main > article img{
+  border-radius: inherit;
+  height: 100%;
 }
 
 main > article p{
+  position: absolute;
+  bottom: 5%;
   display: block;
   color: var(--second-color);
   padding: 5px;
   padding-inline: 30px;
   width: fit-content;
-  transform: translate(5%, -150%);
   backdrop-filter: blur(15px);
   clip-path: polygon(var(--path-invert-rhomb));
 }
 
 main > aside{
-  padding: 15px;
   width: 40%;
-  background-color: var(--second-color);
 }
 
 main > aside p{
@@ -105,6 +115,13 @@ main > aside p{
 }
 
 main > aside .options{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+main > aside .options button{
   display: flex;
   align-items: center;
   gap: 5px;
@@ -125,8 +142,8 @@ main > aside button{
   padding-inline: 10px;
   font-size: 1.2rem;
   color: var(--second-color);
-  background-color: var(--primary-color);
-  border: 1px solid var(--emphasis-color);
+  background-color: rgb(var(--primary-color));
+  border: 1px solid rgb(var(--emphasis-color));
   animation: blink 3s ease;
   transition: .2s;
 }
@@ -138,4 +155,10 @@ main > aside button:hover{
 @keyframes blink{
   0%{ opacity: 0; }
   100%{ opacity: 1; }
+}
+
+@keyframes bg{
+  0%{ background-position: 30% 30%; }
+  50%{ background-position: 70% 70%; }
+  100%{ background-position: 30% 30%; }
 }
