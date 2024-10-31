@@ -10,7 +10,7 @@ const badEndingHideText = ' O coração bate tão forte que parece querer romper
 
 const blocks = {
 	'init': {
-		text: 'Você abre os olhos, ainda com a cabeça meio zonza. O último filme foi uma decepção total, nada de assustador. "Que desperdício de tempo", pensa enquanto se levanta do sofá. A sala está iluminada apenas pelo brilho suave da TV, que ainda exibe os créditos rolando. Você decide que a única coisa que pode salvar a noite é mais pipoca, então se arrasta até a cozinha. Mas antes que você possa chegar até lá, o silêncio da casa é interrompido. O telefone começa a tocar. O som ecoa pela sala, cortando a tranquilidade de forma inesperada. "Quem estaria me ligando a essa hora?", você se pergunta, enquanto avança com uma certa impaciência em direção ao telefone fixo e o...',
+		text: 'você abre os olhos, ainda com a cabeça meio zonza. O último filme foi uma decepção total, nada de assustador. "Que desperdício de tempo", pensa enquanto se levanta do sofá. A sala está iluminada apenas pelo brilho suave da TV, que ainda exibe os créditos rolando. Você decide que a única coisa que pode salvar a noite é mais pipoca, então se arrasta até a cozinha. Mas antes que você possa chegar até lá, o silêncio da casa é interrompido. O telefone começa a tocar. O som ecoa pela sala, cortando a tranquilidade de forma inesperada. "Quem estaria me ligando a essa hora?", você se pergunta, enquanto avança com uma certa impaciência em direção ao telefone fixo e o...',
 		img: {
 			src: 'https://darkside.blog.br/wp-content/uploads/2022/02/panico-telefone-1024x614.png',
 			copyright: 'pânico (1996)',
@@ -156,21 +156,21 @@ const blocks = {
 		]
 	},
   'will_to_hide': {
-		text: 'você vai te esconder?',
+		text: 'Após essa escolha, você sente a adrenalina correr pelo corpo. Mas logo percebe o quão inútil ela parece diante do perigo real à sua frente. Seu coração bate acelerado, e você sabe que precisa tomar uma decisão rápida. O suposto assassino está por perto, e agora você só tem duas opções claras na sua cabeça: "Posso esconder ou correr. Qual será a melhor escolha?"',
 		chooses: [
 			{
-				label: 'sim',
+				label: 'esconder',
 				forKey: 'to_hide'
 			},
 			{
-				label: 'não',
+				label: 'correr',
 				forKey: 'to_run'
 			},
 		]
 	},
 
   'to_hide': {
-		text: 'você está na cozinha, aonde você vai de esconder?',
+		text: 'Com a decisão tomada, você procura um lugar para se esconder na sua cozinha, tentando acalmar respiração e abafar qualquer som que possa entregar sua presença. "Mas onde? aonde irei me esconder?"',
 		chooses: [
 			{
 				label: 'no balção',
@@ -207,7 +207,7 @@ const blocks = {
 		]
 	},
   'to_run': {
-		text: 'você está na cozinha, para onde você vai correr?',
+		text: 'A adrenalina toma conta de você, e tudo o que pensa é em fugir dali o mais rápido possível. Mas precisa decidir rapidamente para onde ir, cada segundo conta. "Para onde eu irei?"',
 		chooses: [
 			{
 				label: 'para os fundos',
@@ -233,13 +233,9 @@ const blocks = {
     chooses: btn_reset,
 	},
   'good_ending': {
-		text: 'parabens!!! você ganhou o final bom',
+		text: 'Você sente o coração desacelerando, a respiração finalmente voltando ao normal. O silêncio ao redor é estranho, quase surreal, mas o terror que passou ainda está fresco em sua mente. Você sobreviveu. Talvez por sorte, talvez por habilidade, mas isso não importa. O importante é que você ainda está aqui, com o gosto amargo da adrenalina e a certeza de que enfrentou algo sombrio… e sobreviveu. Por enquanto, está tudo bem. Mas a sensação de que algo pode acontecer a qualquer momento permanece. Afinal, sabe que a ameaça pode não ter desaparecido de verdade.',
     chooses: btn_reset,
   },
-}
-
-function typeWrite(){
-
 }
 
 function getElem(query){
@@ -278,7 +274,7 @@ function updateContent(key, adicionalText, img){
       addChooses()
       return;
     }
-    p.textContent += block.text[i];
+    p.textContent += i < 1? block.text[i].toUpperCase() : block.text[i];
     setTimeout(writeText, 1)
   }
   writeText();
