@@ -79,8 +79,6 @@ main > *{
 }
 
 main > article{
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
   display: flex;
   position: relative;
   flex-direction: column;
