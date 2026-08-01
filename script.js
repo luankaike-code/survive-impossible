@@ -17,11 +17,11 @@ const blocks = {
 		},
 		chooses: [
       {
-        label: 'desligar',
+        label: 'desliga',
         forKey: 'call_off_1'
       },
       {
-        label: 'atender',
+        label: 'atende',
         forKey: 'question_1'
       }
     ]
@@ -30,11 +30,11 @@ const blocks = {
 		text: 'Você decide ignorar o telefone, desligando-o com um gesto impaciente. “Deve ser só algum telemarketing", pensa enquanto retoma seu caminho para a cozinha. O objetivo de fazer pipoca retorna a ser a sua única preocupação agora. Mas, antes mesmo de conseguir pegar o saco de milho, o telefone toca novamente, cortando a paz da casa. Você solta um suspiro frustrado e vai até lá. Ao se aproximar do aparelho, o som insistente continua, e a curiosidade se mistura com a irritação. Você hesita por um momento, mas acaba pegando o telefone e o...',
 		chooses: [
       {
-        label: 'desligar',
+        label: 'desliga',
         forKey: 'call_off_2'
       },
       {
-        label: 'ligar',
+        label: 'atende',
         forKey: 'question_1'
       }
     ]
@@ -47,7 +47,7 @@ const blocks = {
         forKey: 'house_invaded'
       },
       {
-        label: 'ligar',
+        label: 'atender',
         forKey: 'question_1'
       }
     ]
@@ -57,11 +57,11 @@ const blocks = {
 		text: 'Com um suspiro resignado, você pega o telefone, levando-o até o ouvido. “Alô?" sua voz ecoa na escuridão da casa. O silêncio é ensurdecedor por um instante, até que uma respiração pesada se faz ouvir do outro lado da linha. "Gosta de filmes?" a voz sussurra, carregada de um tom ameaçador que faz sua pele arrepiar. Você sente um frio na barriga, tentando identificar quem está falando, mas a voz é estranha e distorcida. Você vai responder ou desligar?',
 		chooses: [
 			{
-				label: 'sim',
+				label: 'responder',
 				forKey: 'question_2'
 			},      
       {
-				label: 'desligar o telefone',
+				label: 'desligar',
 				forKey: 'house_invaded'
 			},
 		]
@@ -125,7 +125,7 @@ const blocks = {
 			{
 				label: 'debochar',
 				forKey: 'bad_ending',
-        adicionalText: 'Você ri, um riso curto e nervoso, mas o suficiente para provocar. “Sabe, você devia se esforçar mais. Não foi tão difícil assim”, você debocha, sentindo a tensão escoar um pouco de seu corpo. “Se isso foi o melhor que você tem, acho que não vou precisar me preocupar tanto da próxima vez.”. Você volta a seu objetivo de fazer pipoca. "Isso foi mais assustador do que aquele film...", seu pensamento é interrompido por'
+        adicionalText: 'Você ri, um riso curto e nervoso, mas o suficiente para provocar. “Sabe, você devia se esforçar mais. Não foi tão difícil assim”, você debocha, sentindo a tensão escoar um pouco de seu corpo. “Se isso foi o melhor que você tem, acho que não vou precisar me preocupar tanto da próxima vez.”. Você volta a seu objetivo de fazer pipoca. "Isso foi mais assustador do que aquele film...", seu pensamento é interrompido por...'
 			},
 			{
 				label: 'agradecer',
@@ -135,7 +135,7 @@ const blocks = {
   },
 
   'house_invaded': {
-		text: 'O silêncio pesado da casa é brutalmente interrompido por um som agudo e inconfundível — o estilhaçar de vidro. Seu corpo se enrijece instantaneamente, o coração acelerando no peito. Uma janela foi quebrada, e você não tem tempo para hesitar. Alguém está aqui. A adrenalina começa a tomar conta de você. Seus olhos correm pela sala em busca de algo para se proteger. O telefone está ao seu lado, mas será que ele pode te ajudar? Na cozinha, uma faca brilha sob a luz fraca. Você lembra também que há uma pistola no armário, mas, em meio ao caos, até uma banana na bancada parece uma boa opção',
+		text: 'O silêncio pesado da casa é brutalmente interrompido por um som agudo e inconfundível — o estilhaçar de vidro. Seu corpo se enrijece instantaneamente, o coração acelerando no peito. Uma janela foi quebrada, e você não tem tempo para hesitar. Alguém está aqui. A adrenalina começa a tomar conta de você. Seus olhos correm pela sala em busca de algo para se proteger. O telefone está ao seu lado, mas será que ele pode te ajudar? Na cozinha, uma faca brilha sob a luz fraca. Você lembra também que há uma pistola no armário, mas, em meio ao caos, até uma banana na bancada parece uma boa opção.',
 		chooses: [
 			{
 				label: 'telefone',
@@ -156,10 +156,10 @@ const blocks = {
 		]
 	},
   'will_to_hide': {
-		text: 'Após essa escolha, você sente a adrenalina correr pelo corpo. Mas logo percebe o quão inútil ela parece diante do perigo real à sua frente. Seu coração bate acelerado, e você sabe que precisa tomar uma decisão rápida. O suposto assassino está por perto, e agora você só tem duas opções claras na sua cabeça: "Posso esconder ou correr. Qual será a melhor escolha?"',
+		text: 'Após essa escolha, você sente a adrenalina correr pelo corpo. Mas logo percebe o quão inútil ela parece diante do perigo real à sua frente. Seu coração bate acelerado, e você sabe que precisa tomar uma decisão rápida. O suposto assassino está por perto, e agora você só tem duas opções claras na sua cabeça: "Posso me esconder ou correr. Qual será a melhor escolha?"',
 		chooses: [
 			{
-				label: 'esconder',
+				label: 'se esconder',
 				forKey: 'to_hide'
 			},
 			{
