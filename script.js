@@ -21,7 +21,7 @@ const blocks = {
         forKey: 'call_off_1'
       },
       {
-        label: 'atende',
+        label: 'atender',
         forKey: 'question_1'
       }
     ]
