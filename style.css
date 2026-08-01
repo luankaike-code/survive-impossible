@@ -167,3 +167,13 @@ main > aside button:hover{
   50%{ background-position: 70% 70%; }
   100%{ background-position: 30% 30%; }
 }
+
+@media (max-width: 700px) {
+	main{
+		flex-direction: column;
+	}
+
+	main > aside{
+		width: 90%;
+	}
+}
