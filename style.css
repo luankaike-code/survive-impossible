@@ -168,6 +168,12 @@ main > aside button:hover{
   100%{ background-position: 30% 30%; }
 }
 
+@media (max-width: 750px) {
+	header{
+  	padding-inline-end: 15px;
+	}
+}
+
 @media (max-width: 700px) {
 	main{
 		flex-direction: column;
