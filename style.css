@@ -193,4 +193,8 @@ main > aside button:hover{
 		width: 100%;
 		text-align: center;
 	}
+
+	main > article > p{
+		padding-inline: 10px;
+	}
 }
