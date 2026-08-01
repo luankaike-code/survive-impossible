@@ -177,7 +177,7 @@ const blocks = {
 				forKey: 'bad_ending',
         adicionalText: 'Você, tremendo de pavor, entra debaixo balção.'+badEndingHideText,
 				img: {
-					src: 'https://i0.wp.com/br.nacaodamusica.com/wp-content/uploads/2022/02/Panico.jpg',
+					src: 'assets/imgs/pânico-VI-2022-ghost-face.png',
 					copyright: 'pânico VI (2022)'
 				}
 			},
@@ -186,7 +186,7 @@ const blocks = {
 				forKey: 'bad_ending',
         adicionalText: 'Você se esconde atrás da sua cortinha favorita. Mas logo percebe a má escolha de vez. Percebe que não terá como escolher outra.'+badEndingHideText,
 				img: {
-					src: 'https://i0.wp.com/br.nacaodamusica.com/wp-content/uploads/2022/02/Panico.jpg',
+					src: 'assets/imgs/pânico-VI-2022-ghost-face.png',
 					copyright: 'pânico VI (2022)'
 				}
 			},
@@ -195,7 +195,7 @@ const blocks = {
 				forKey: 'bad_ending',
         adicionalText: 'Você se esconde atrás da porta se lembrando do seu tempo de pique-esconde, "essa ideia é uma idiotice", pensa consigo mesma. "Ela parece muito frágil", você anseia.'+badEndingHideText,
 				img: {
-					src: 'https://blogger.googleusercontent.com/img/a/AVvXsEjZRGLxBGdtn48cuYc1qVJ40WjPG3rG-RkabyxQSDIAELMQbPSV4RExN7pqdsATxdqDwi3W4kRUR7VU5U4DJOcaQEpah8FZ0CIXXFtRXlLBRJnTCMwRnG7YwIgP6PNUzwTsf0xSUDIxcg3953Coi2YEl_MZisBROIjMLsk-_gIPfaFmgs5DDTcqJnyy=s2240',
+					src: 'assets/imgs/pânico-VI-2022-2022-ghost-try-enter.png',
 					copyright: 'pânico VI (2022)'
 				}
 			},
