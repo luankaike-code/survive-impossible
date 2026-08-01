@@ -12,7 +12,7 @@ const blocks = {
 	'init': {
 		text: 'você abre os olhos, ainda com a cabeça meio zonza. O último filme foi uma decepção total, nada de assustador. "Que desperdício de tempo", pensa enquanto se levanta do sofá. A sala está iluminada apenas pelo brilho suave da TV, que ainda exibe os créditos rolando. Você decide que a única coisa que pode salvar a noite é mais pipoca, então se arrasta até a cozinha. Mas antes que você possa chegar até lá, o silêncio da casa é interrompido. O telefone começa a tocar. O som ecoa pela sala, cortando a tranquilidade de forma inesperada. "Quem estaria me ligando a essa hora?", você se pergunta, enquanto avança com uma certa impaciência em direção ao telefone fixo e o...',
 		img: {
-			src: 'https://darkside.blog.br/wp-content/uploads/2022/02/panico-telefone-1024x614.png',
+			src: './assets/imgs/pânico-1996-woman-phone.png',
 			copyright: 'pânico (1996)',
 		},
 		chooses: [
