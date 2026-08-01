@@ -183,3 +183,14 @@ main > aside button:hover{
 		width: 90%;
 	}
 }
+
+@media (max-width: 550px) {
+	header > nav{
+		display: none;
+	}
+
+	header > h1{
+		width: 100%;
+		text-align: center;
+	}
+}
