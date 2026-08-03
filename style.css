@@ -59,6 +59,14 @@ header a{
   font-size: 1.5rem;
 }
 
+header div{
+  display: contents;
+}
+
+header div p{
+  display: none;
+}
+
 main{
   display: flex;
   padding: 20px;
@@ -183,13 +191,30 @@ main > aside button:hover{
 }
 
 @media (max-width: 550px) {
-	header > nav{
+	header > div{
+		display: block;
+    position: relative;
+	}
+
+  header > div > p{
+		display: block;
+	}
+
+  header > div > nav{
 		display: none;
 	}
 
-	header > h1{
-		width: 100%;
-		text-align: center;
+  header > div:hover > nav{
+		display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    background-color: rgb(var(--primary-color));
+    padding: 7px;
+    top: 34px;
+    border: 1px solid rgb(var(--emphasis-color));
+    border-top: 0px solid rgb(var(--emphasis-color));
+    z-index: 50;
 	}
 
 	main > article > p{
