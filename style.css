@@ -63,7 +63,7 @@ header div{
   display: contents;
 }
 
-header div p{
+header div img{
   display: none;
 }
 
@@ -196,7 +196,7 @@ main > aside button:hover{
     position: relative;
 	}
 
-  header > div > p{
+  header > div > img{
 		display: block;
 	}
 
